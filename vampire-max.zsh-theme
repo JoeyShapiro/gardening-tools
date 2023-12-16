@@ -19,7 +19,7 @@ PROMPT_CONDA=""
 if [[ -n $CONDA_ENV ]]; then
     PROMPT_CONDA='(%{$fg[red]%}%{$fg[white]%}'"$CONDA_ENV"'%{$fg[white]%}%{$fg[red]%})'
 fi
-    PROMPT=$'\n'"%B%F{black}[%F{green}%D{%m/%d %H:%M}%F{black}] %F{red}%n%F{black}@%F{yellow}%m%F{black}:%F{cyan}%~"$'\n'"%F{magenta}($CONDA_ENV)%F{blue} ➜ %f%b"
+
 PROMPT=$'%{$fg[red]%}┌[%{$fg_bold[white]%}%n%{$reset_color%}%{$fg[red]%}@%{$fg_bold[white]%}%m%{$reset_color%}%{$fg[red]%}] [%{$fg_bold[white]%}/dev/%y%{$reset_color%}%{$fg[red]%}] %{$(git_prompt_info)%}%(?,,%{$fg[red]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[red]%}])'"$PROMPT_CONDA"
 PROMPT+=$'\n%{$fg[red]%}└[%{$fg_bold[white]%}%~%{$reset_color%}%{$fg[red]%}]>%{$reset_color%} '
 PS2=$' %{$fg[red]%}|>%{$reset_color%} '
